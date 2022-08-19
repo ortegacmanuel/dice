@@ -5,6 +5,14 @@ Class {
 }
 
 { #category : #tests }
+DieTest >> testCreationIsOk [
+		
+	|d|	
+	d := Die withFaces: 20.
+	self assert: d faces equals: 20 
+]
+
+{ #category : #tests }
 DieTest >> testInitializationIsOk [
 		
 	|d|
