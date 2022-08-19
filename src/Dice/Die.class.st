@@ -11,7 +11,7 @@ Class {
 Die class >> withFaces: anInteger [ 
 
 	|d|
-	d := self class new.
+	d := self new.
 	d faces: 	anInteger.
 	^ d
 ]
