@@ -46,19 +46,13 @@ DieHandle >> initialize [
 { #category : #initialization }
 DieHandle >> maxValue [ 
 
-	| res |
-	res := 0.		
-	dice do: [ :each |	res := res + each faces ].
-	^ res 
+	^ (dice collect: [ :each | each faces ]) sumNumbers
 	
 ]
 
 { #category : #initialization }
 DieHandle >> roll [ 
 
-	| res |
-	res := 0.
-	dice do: [ :each |	res := res + each 	roll].
-	^ res 
+	^ (dice collect: [ :each | each roll ]) sumNumbers
 	
 ]
